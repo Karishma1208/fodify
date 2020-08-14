@@ -1,0 +1,149 @@
+.landing_page_main_container {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.landing_page_header_container {
+  height: 150px;
+
+  display: flex;
+}
+
+.fodify {
+  flex-grow: 3;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 200px;
+  font-size: 30px;
+  color: #ef8c33;
+  font-weight: bold;
+}
+
+.signUpLoginButtons {
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 30px;
+}
+.signUpLoginButtons button {
+  border: none;
+  width: 90px;
+  height: 30px;
+  margin: 3px;
+  background-color: #ef8c33;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.signUpLoginButtons button:focus {
+  outline: none;
+  border: 1px solid #ef8c33;
+  box-shadow: 0px 0px 2px 2px #ef8c33;
+}
+
+.signUpLoginButtons button:hover {
+  background-color: #f0801c;
+  border: none;
+  width: 91px;
+  height: 31px;
+  margin: 3px;
+  color: white;
+}
+
+.landing_page_search_by_city_container {
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#citySearch {
+  width: 400px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #ef8c33;
+}
+
+#citySearch:focus {
+  outline: none;
+  border: 1px solid #ef8c33;
+  box-shadow: 0px 0px 2px 2px #ef8c33;
+}
+
+#citySearchbtn {
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 5px;
+  width: 70px;
+  background-color: #ef8c33;
+  color: white;
+  border: 1px solid #ef8c33;
+  cursor: pointer;
+}
+
+#citySearchbtn:focus {
+  outline: none;
+  border: 1px solid #ef8c33;
+  box-shadow: 0px 0px 2px 2px #ef8c33;
+}
+
+#citySearchbtn:hover {
+  height: 41px;
+  border-radius: 4px;
+  margin-left: 3px;
+  width: 71px;
+  background-color: #f0801c;
+  color: white;
+  border: 1px solid #ef8c33;
+  cursor: pointer;
+}
+
+.landing_page_search_by_restaurent_dishes_container {
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#restaurentSearch {
+  width: 400px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #ef8c33;
+}
+
+#restaurentSearch:focus {
+  outline: none;
+  border: 1px solid #ef8c33;
+  box-shadow: 0px 0px 2px 2px #ef8c33;
+}
+
+#searchRestaurentBtn {
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 5px;
+  width: 70px;
+  background-color: #ef8c33;
+  color: white;
+  border: 1px solid #ef8c33;
+  cursor: pointer;
+}
+#searchRestaurentBtn:focus {
+  outline: none;
+  border: 1px solid #ef8c33;
+  box-shadow: 0px 0px 2px 2px #ef8c33;
+}
+
+#searchRestaurentBtn:hover {
+  height: 41px;
+  border-radius: 4px;
+  margin-left: 3px;
+  width: 71px;
+  background-color: #f0801c;
+  color: white;
+  border: 1px solid #ef8c33;
+  cursor: pointer;
+}
