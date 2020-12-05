@@ -1,33 +1,198 @@
-body {
-  margin: 0;
-}
-
-button,
-label {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
-.text-muted {
-  color: darkgray;
-}
-
-.btn {
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.25rem;
-}
-
-.Cart {
+.cartConatiner {
+  background-color: white;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  overflow: auto; /* To provide a BFC which prevents margin bleedthru. */
-  font-family: sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 50px;
+  position: absolute;
+  right: 3%;
+  border: 1px solid #efefef;
+  border-radius: 7px;
+}
+
+.cartConatiner:hover {
+  border: 1px solid #b7b7b7;
+}
+
+.cart_title {
+  font-size: 28px;
+  font-weight: 500;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+.cart_totalItem {
+  color: #333333;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 25px;
+}
+
+.cart_Items {
+  max-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  gap: 1em;
+}
+
+.cart_item_card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart_item_card_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2px;
+}
+
+.cart_item_name {
+  font-size: 17px;
+}
+
+.cart_item_price {
+  font-size: 13px;
+  color: #555;
   text-align: center;
 }
 
-.App__body {
-  flex: 1 1 auto;
+.cart_item_card_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.cart_item_card_right_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #aaa;
+  max-width: 75px;
+  padding: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart_item_card_right_top .incBtn,
+.cart_item_card_right_top .decBtn {
+  width: 25px;
+  padding: 0;
+  background-color: white;
+  color: #555;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart_item_card_right_top .incBtn:hover {
+  background-color: #b7f0b7;
+}
+
+.cart_item_card_right_top .decBtn:hover {
+  background-color: #f1c3c3;
+}
+
+.cart_item_card_right_bot {
+  text-align: center;
+}
+
+.total_price {
+  margin-top: 22px;
+}
+
+.checkoutBtn {
+  height: 50px;
+  width: 100%;
+  background-color: #60b246;
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  margin-top: 28px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+.checkoutBtn:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px #bbb;
+          box-shadow: 2px 2px 2px 2px #bbb;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cartConatiner {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .cartConatiner {
+    width: 250px;
+  }
+}
+/*# sourceMappingURL=Cart.css.map */

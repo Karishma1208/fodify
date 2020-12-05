@@ -1,0 +1,219 @@
+.XouterX {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+.dishContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  gap: 1em;
+  background-color: #f4f4f4;
+}
+
+.dishContainer_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dish_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  height: 120px;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #e7e7e7;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dish_box:hover {
+  border: 1px solid #b7b7b7;
+}
+
+.dish_img_areaX {
+  display: -ms-grid;
+  display: grid;
+  background-color: #777;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  width: 200px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dish_img_areaX img {
+  width: 200px;
+  height: 120px;
+}
+
+.dish_data {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dish_nameX {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.dish_priceX {
+  font-size: 15px;
+  color: #333;
+}
+
+.dish_addToCartX {
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  font-weight: 500;
+  background-color: white;
+  color: green;
+  border: 1px solid #999;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.dish_addToCartX:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px #bbb;
+          box-shadow: 2px 2px 2px 2px #bbb;
+}
+
+.cartContainerOuter {
+  display: none;
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cartContainerOuter .showCartBtn {
+  position: absolute;
+  right: 20%;
+  margin-top: 8px;
+  height: 30px;
+  width: 60px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.cartContainerOuter .showCartBtn:hover {
+  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+          box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+@media only screen and (max-width: 1300px) {
+  .dish_box {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .dish_box {
+    width: 390px;
+  }
+  .dishContainer {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .XouterX {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dishContainer {
+    width: 90%;
+  }
+  .normalCart {
+    display: none;
+  }
+  .cartContainerOuter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .dish_box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: 320px;
+  }
+  .dish_data {
+    width: 200px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+/*# sourceMappingURL=dishStyle.css.map */

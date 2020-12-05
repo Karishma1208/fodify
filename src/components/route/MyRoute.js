@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
+import swal from 'sweetalert';
 import LandingPage from "../landing-page/LandingPage";
 import MainPage from "../main-page/MainPage";
 import About from "../about/About";
 import RestaurentDetails from "../restaurentDetails/RestaurentDetails";
 import { useHistory } from "react-router-dom";
+import ForgetPassword from "../SigUp-LogIn/ForgetPassword";
+import Payment from "../credit-card/Payment";
 
 function MyRoute() {
   const history = useHistory();
@@ -13,10 +16,12 @@ function MyRoute() {
   const [res, setRes] = useState("");
 
   const cityNameFromInputField = (cityName) => {
-    console.log(cityName);
     setCityName(cityName);
     if (cityName === "") {
-      alert("Please fill correct city Name");
+      swal({
+        text: "Please fill correct city Name",
+        icon: "warning",
+      });
     } else {
       history.push("/restaurent");
     }
@@ -56,6 +61,12 @@ function MyRoute() {
       </Switch>
       <Switch>
         <Route path="/about" component={About} />
+      </Switch>
+      <Switch>
+        <Route path="/payment:firebaseUid" component={Payment} />
+      </Switch>
+      <Switch>
+        <Route path="/forgetPassword" component={ForgetPassword} />
       </Switch>
       <Switch>
         <Route

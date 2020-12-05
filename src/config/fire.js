@@ -1,13 +1,13 @@
 import * as firebase from "firebase";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyCtngBhk5W6hKHOLPbUz0DRDfS6zTz44oo",
-  authDomain: "fodify-3db8d.firebaseapp.com",
-  databaseURL: "https://fodify-3db8d.firebaseio.com",
-  projectId: "fodify-3db8d",
-  storageBucket: "fodify-3db8d.appspot.com",
-  messagingSenderId: "39042846900",
-  appId: "1:39042846900:web:8b7c6692a51eda575e07e1",
+  apiKey: "AIzaSyDx3iOf0ybtRNGvYh6yiyuc6owwN7knAQ0",
+  authDomain: "fodify-d1022.firebaseapp.com",
+  databaseURL: "https://fodify-d1022.firebaseio.com",
+  projectId: "fodify-d1022",
+  storageBucket: "fodify-d1022.appspot.com",
+  messagingSenderId: "475704068862",
+  appId: "1:475704068862:web:83bda4bf762c1819bc33af",
 };
 
 firebase.initializeApp(firebaseConfig);

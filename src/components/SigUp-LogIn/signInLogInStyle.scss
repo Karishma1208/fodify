@@ -11,29 +11,18 @@ $containerbg: #ffffff;
   display: flex;
   justify-content: center;
   #X {
-    position: relative;
-    left: 325px;
     outline: none;
     border: none;
+    float: right;
     background-color: #ef8c33;
     color: white;
-  }
-  #X:hover {
-    position: relative;
-    left: 325px;
-    outline: none;
-    border: none;
-    background-color: #492b05;
-    color: white;
     cursor: pointer;
-  }
-  #X:focus {
-    position: relative;
-    left: 325px;
-    outline: none;
-    border: none;
-    background-color: #e68c1b;
-    color: white;
+    &:hover {
+      background-color: #492b05;
+    }
+    &:focus {
+      background-color: #e68c1b;
+    }
   }
 
   .SignUpLogIn_container {
@@ -48,6 +37,7 @@ $containerbg: #ffffff;
       p {
         font-weight: bold;
         text-align: center;
+        font-size: 24px;
       }
       input[type="text"] {
         width: 290px;
@@ -57,8 +47,6 @@ $containerbg: #ffffff;
       }
 
       input[type="text"]:focus {
-        width: 290px;
-        height: 30px;
         border-radius: 4px;
         border: 2px solid #ef8c33;
         outline: none;
@@ -71,8 +59,6 @@ $containerbg: #ffffff;
         border: 1px solid #ef8c33;
       }
       input[type="password"]:focus {
-        width: 290px;
-        height: 30px;
         border-radius: 4px;
         margin-top: 5px;
         border: 2px solid #ef8c33;
@@ -89,9 +75,6 @@ $containerbg: #ffffff;
         color: white;
       }
       button:focus {
-        width: 294px;
-        margin-top: 5px;
-        height: 30px;
         background-color: #ef8c33;
         border-radius: 4px;
         outline: none;
@@ -100,9 +83,6 @@ $containerbg: #ffffff;
         cursor: pointer;
       }
       button:hover {
-        width: 294px;
-        margin-top: 5px;
-        height: 30px;
         background-color: #efab3a;
         border-radius: 4px;
         outline: none;
@@ -118,6 +98,7 @@ $containerbg: #ffffff;
       p {
         font-weight: bold;
         text-align: center;
+        font-size: 24px;
       }
 
       input[type="text"] {
@@ -129,8 +110,6 @@ $containerbg: #ffffff;
       }
 
       input[type="text"]:focus {
-        width: 290px;
-        height: 30px;
         border-radius: 4px;
         border: 2px solid #ef8c33;
         outline: none;
@@ -143,8 +122,6 @@ $containerbg: #ffffff;
         border: 1px solid #ef8c33;
       }
       input[type="password"]:focus {
-        width: 290px;
-        height: 30px;
         border-radius: 4px;
         margin-top: 5px;
         border: 2px solid #ef8c33;
@@ -161,9 +138,6 @@ $containerbg: #ffffff;
         color: white;
       }
       button:focus {
-        width: 294px;
-        margin-top: 5px;
-        height: 30px;
         background-color: #ef8c33;
         border-radius: 4px;
         outline: none;
@@ -172,15 +146,35 @@ $containerbg: #ffffff;
         cursor: pointer;
       }
       button:hover {
-        width: 294px;
-        margin-top: 5px;
-        height: 30px;
         background-color: #efab3a;
         border-radius: 4px;
         outline: none;
         border: none;
         color: white;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .SignUpLogIn_main_container {
+    .SignUpLogIn_container {
+      width: 250px;
+      height: 300px;
+      .logIn_container input[type="text"],
+      .logIn_container input[type="password"],
+      .signUp_container input[type="text"],
+      .signUp_container input[type="password"] {
+        width: 190px;
+      }
+      .logIn_container button,
+      .signUp_container button {
+        width: 192px;
+      }
+      .logIn_container,
+      .signUp_container {
+        width: 200px;
       }
     }
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as firebase from "firebase";
-
+import swal from 'sweetalert';
 import "./signInLogInStyle.scss";
 import "../../config/fire";
 import { useHistory } from "react-router-dom";
@@ -13,8 +13,10 @@ function SignUpLogIn(props) {
   });
   const [signInvalue, setsigninvalue] = useState({
     signUpname: "",
+    signUpPhone: "",
     signinput: "",
     signpassword: "",
+    confirmsignpassword: "",
   });
 
   const changeLogInhandler = (e) => {
@@ -34,6 +36,11 @@ function SignUpLogIn(props) {
   const authListener = () => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
+        swal({
+          text: "You have successfully loged in",
+          icon: "success",
+        });
+        props.hidePopup();
         history.push("/restaurent");
       }
     });
@@ -50,27 +57,49 @@ function SignUpLogIn(props) {
         authListener();
       })
       .catch((error) => {
-        console.log(error);
+        swal("Something went wrong!", error.message, "error");
       });
   };
 
   const signInInput = () => {
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(
-        signInvalue.signinput,
-        signInvalue.signpassword
-      )
-      .then((u) => {
-        return u.user.updateProfile({
-          displayName: signInvalue.signUpname,
+    if (
+      signInvalue.signUpname !== "" &&
+      signInvalue.signUpPhone !== "" &&
+      signInvalue.signinput !== "" &&
+      signInvalue.signpassword !== "" &&
+      signInvalue.confirmsignpassword !== "" &&
+      signInvalue.signpassword === signInvalue.confirmsignpassword
+    ) {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(
+          signInvalue.signinput,
+          signInvalue.signpassword
+        )
+        .then((u) => {
+          return u.user
+            .updateProfile({
+              displayName: signInvalue.signUpname,
+            })
+            .then(() => {
+              swal("Great!", "You have successfully signed up", "success");
+              props.hidePopup();
+            });
+        })
+        .catch((error) => {
+          swal("Something went wrong!", error.message, "error");
         });
-      })
-      .catch((error) => console.log(error));
+    } else {
+      swal("Something went wrong!", "Please fill data correctly", "error");
+    }
   };
 
   const myPopUpOne = () => {
     props.popUp();
+  };
+
+  const forgetPasswordHandler = () => {
+    history.push("/forgetPassword");
   };
 
   return (
@@ -102,6 +131,9 @@ function SignUpLogIn(props) {
             />
             <br />
             <button onClick={logininput}>Log In</button>
+            <div onClick={forgetPasswordHandler} style={{ cursor: "pointer", fontSize: "17px", textAlign: "center", color: "red", marginTop: "10px" }}>
+              forget password
+            </div>
           </div>
         ) : null}
 
@@ -116,6 +148,16 @@ function SignUpLogIn(props) {
               placeholder="name"
               name="signUpname"
               value={signInvalue.signUpname}
+              isrequired
+            />
+            <input
+              type="text"
+              onChange={(e) => {
+                signUpChangehandler(e);
+              }}
+              placeholder="phone No"
+              name="signUpPhone"
+              value={signInvalue.signUpPhone}
             />
             <br />
             <input
@@ -136,6 +178,15 @@ function SignUpLogIn(props) {
               placeholder="password"
               name="signpassword"
               value={signInvalue.signpassword}
+            />
+            <input
+              type="password"
+              onChange={(e) => {
+                signUpChangehandler(e);
+              }}
+              placeholder="confim password"
+              name="confirmsignpassword"
+              value={signInvalue.signconfirmpassword}
             />
             <br />
             <button onClick={signInInput}>Sign Up</button>

@@ -1,0 +1,103 @@
+.resDetails_container {
+  width: 100%;
+  background-color: #171a29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  color: #c7c7c7;
+}
+
+.resDetails_inner_container {
+  width: 80%;
+  margin: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3em;
+}
+
+.dish_img_area {
+  display: -ms-grid;
+  display: grid;
+  background-color: #777;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 170px;
+  width: 270px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dish_img_area img {
+  width: 270px;
+  height: 170px;
+}
+
+.res_titleX {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.res_titleX,
+.res_cuisinesX,
+.res_locationX,
+.res_timingX,
+.res_costX {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.res_cuisinesX,
+.res_locationX,
+.res_timingX {
+  margin-bottom: 10px;
+}
+
+.cost_rateX {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.res_costX,
+.res_ratingX {
+  font-weight: 500;
+  color: white;
+}
+
+.res_costX_sub,
+.res_ratingX_sub {
+  display: block;
+  font-size: 12px;
+  color: #c7c7c7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .resDetails_inner_container {
+    width: 85%;
+    gap: 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dish_img_area {
+    display: none;
+  }
+}
+/*# sourceMappingURL=restaurentStyle.css.map */
